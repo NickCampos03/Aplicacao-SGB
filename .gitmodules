@@ -4,3 +4,5 @@
 [submodule "SGB---Frontend"]
 	path = Aplicacao SGB/SGB---Frontend
 	url = https://github.com/NickCampos03/SGB---Frontend.git
+[submodule "Aplicacao SGB/SGB---Backend"]
+	branch = main
