@@ -1,0 +1,28 @@
+version: "3.8"
+
+services:
+  backend:
+    build:
+      context: ./SGB---Backend/sgb-api/sgb-api
+      dockerfile: Dockerfile
+    container_name: sgb-backend
+    ports:
+      - "8080:8080"
+    networks:
+      - sgb-network
+
+  frontend:
+    build:
+      context: ./SGB---Frontend/sgb-web/sgb-web/Web
+      dockerfile: Dockerfile
+    container_name: sgb-frontend
+    ports:
+      - "5173:80"
+    depends_on:
+      - backend
+    networks:
+      - sgb-network
+
+networks:
+  sgb-network:
+    driver: bridge

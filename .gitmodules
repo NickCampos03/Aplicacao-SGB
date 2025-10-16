@@ -1,0 +1,6 @@
+[submodule "SGB---Backend"]
+	path = Aplicacao SGB/SGB---Backend
+	url = https://github.com/NickCampos03/SGB---Backend.git
+[submodule "SGB---Frontend"]
+	path = Aplicacao SGB/SGB---Frontend
+	url = https://github.com/NickCampos03/SGB---Frontend.git
