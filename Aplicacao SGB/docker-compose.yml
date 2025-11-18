@@ -10,10 +10,14 @@ services:
       - "8080:8080"
     networks:
       - sgb-network
+    environment:
+      DB_URL: "jdbc:postgresql://ep-calm-term-actzvrne.sa-east-1.aws.neon.tech:5432/neondb?sslmode=require&channel_binding=require"
+      DB_USERNAME: "neondb_owner"
+      DB_PASSWORD: "npg_iYFk03IAjbJE"
 
   frontend:
     build:
-      context: ./SGB---Frontend/sgb-web/sgb-web/Web
+      context: ./SGB---Frontend/sgb-web/sgb-web/web
       dockerfile: Dockerfile
     container_name: sgb-frontend
     ports:
